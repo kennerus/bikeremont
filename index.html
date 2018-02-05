@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ремонт вело и мото техники г. Донецк</title>
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/device.js"></script>
+</head>
+<body>
+	<header class="header header-main">
+		<div class="header__container main-page">
+			<div class="header__title">
+				<a href="index.html"><img src="img/logo.png" alt=""></a>
+			</div>
+			<div class="header__nav">
+				<div class="header__describe"><p>Вело-мото мастерская г. Донецк</p></div>
+				<div class="header__menu">
+					<div id="nav-icon1">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<nav class="header__nav-menu">
+						<a href="our-work.html">Наши работы</a>
+						<a href="feedback.html">Отзывы клиентов</a>
+						<a href="contacts.html">Контакты</a>
+					</nav>
+				</div>
+			</div>
+			<div class="header__phone">
+				<div class="header__phone-number">
+					<p id="phone1"><i class="fa fa-phone" aria-hidden="true"></i> 066 668 61 54</p>
+				</div>
+				<div class="header__call-order">
+					<a href="#win1">Заказать звонок</a>
+				</div>
+				<a href="#x" class="overlay" id="win1"></a>
+				<div class="popup">
+					<form id="form" method="post">
+						<legend>Оставьте ваши контакты и мы перезвоним вам в течении часа</legend>
+						<input type="text" id="username" name="username" placeholder="Ваше имя*" required>
+						<input type="tel" id="phone" name="phone" placeholder="Номер телефона*"  required>
+						<input type="submit" value="Отправить">
+						<input type="hidden" name="formData" value="Заявка с сайта">
+					</form>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="content">
+		<div class="content__repair">
+			<div class="content__pit-bike">
+				<h3><a class="content__repair-link" href="pit-bike.html">Ремонт пит-байков</a></h3>
+				<a href="pit-bike.html">
+					<img src="img/pit-bike.jpg" alt="Ремонт пит-байков">
+				</a>
+			</div>
+			<div class="content__bike">
+				<h3><a class="content__repair-link" href="bike.html">Ремонт велосипеда любой сложности</a></h3>
+				<a href="bike.html">
+					<img src="img/bike.jpg" alt="Ремонт велосипедов">
+				</a>
+			</div>
+			<div class="content__moto">
+				<h3><a class="content__repair-link" href="moto.html">Ремонт мотоциклов и квадрациклов</a></h3>
+				<a href="moto.html">
+					<img src="img/moto.jpg" alt="Ремонт мотоциклов и квадрациклов">
+				</a>
+			</div>
+			<div class="content__scooter">
+				<h3><a class="content__repair-link" href="scooter.html">Ремонт скутеров</a></h3>
+				<a href="scooter.html">
+					<img src="img/scooter.jpg" alt="Ремонт скутером, мопедов">
+				</a>
+			</div>
+		</div>
+		<div class="content__delivery">
+			<div class="content__table-container">
+				<table class="content__table">
+					<tr class="content__table-row">
+						<td class="content__table-cell content__table-cell_index">
+							<p>Ремонт и обслуживание, покраска пластика, порошковая покраска, запчасти, наклейки</p>
+						</td>
+						<td class="content__table-cell content__table-cell_index">
+							<p>У нас есть возможность доставки вашей техники к нам на ремонт и/или обратно</p>
+							<a href="contacts.html">
+								<img src="img/truck.png" alt="Доставка">
+							</a>
+						</td>
+						<td class="content__table-cell content__table-cell_index">
+							<p>Есть вопросы? Звоните!</p>
+							<p id="phone2"><i class="fa fa-phone" aria-hidden="true"></i> 066 668 61 54</p>
+							<p><a href="#win1">Заказать звонок</a></p>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="footer__social">
+			<a href="https://new.vk.com/bike_dn">
+				<i class="fa fa-vk fa-lg" aria-hidden="true"></i>
+			</a>
+			<a href="https://twitter.com/bikednua">
+				<i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+			</a>
+			<a href="https://www.instagram.com/bikedonetsk/">
+				<i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+			</a>
+		</div>
+		<div class="footer__donetsk">
+			<p>Донецк - 2017</p>
+		</div>
+		<div class="footer__privacy">
+			<a href="privacy.html">Политика конфиденциальности</a>
+		</div>
+	</footer>
+	<script>
+	$(document).ready(function() {
+		$("form").submit(function() {
+			// Получение ID формы
+			var formID = $(this).attr('id');
+			// Добавление решётки к имени ID
+			var formNm = $('#' + formID);
+			$.ajax({
+				type: "POST",
+				url: 'mail.php',
+				data: formNm.serialize(),
+				success: function(data) {
+					// Вывод текста результата отправки
+					$(formNm).html(data);
+				},
+				error: function(jqXHR, text, error) {
+					// Вывод текста ошибки отправки
+					$(formNm).html(error);
+				}
+			});
+			return false;
+		});
+		$('#nav-icon1').click(function() {
+			$(this).toggleClass('open');
+			$('.header__nav-menu').toggle();
+			$('.header__nav-menu').toggleClass('expand');
+		});
+		if (device.mobile()) {
+			$('.header__nav-menu a').addClass('mob');
+			$('#phone1 a').css('font-size', '2rem');
+			$('.header__call-order a').css('font-size', '1.5rem');
+		}
+		
+	});
+
+	  	$('#phone').mask("+38 (999) 999-99-99");
+	</script>
+	<script>
+		if (device.mobile()) {
+			document.getElementById('phone1').innerHTML = '<a href="tel:+38(066)668-61-54">066 668 61 54</a>';
+			document.getElementById('phone2').innerHTML = '<a href="tel:+38(066)668-61-54">066 668 61 54</a>';
+		}
+	</script>
+		
+</body>
+</html>

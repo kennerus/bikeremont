@@ -1,0 +1,53 @@
+.content__container {
+	display: flex;
+}
+
+.content a img {
+	display: block;
+	width: 97%;
+	margin: 5px;
+}
+
+.content__galaxy,
+.content__callback {
+	text-align: center;
+}
+
+.content h3 {
+	margin-bottom: 45px;
+	font-size: 1.8rem;
+}
+
+.content p {
+	margin-bottom: 15px;
+	font-size: 1.2rem;
+}
+
+.content__callback {
+	padding-bottom: 55px;
+}
+
+.content__callback a,
+.content__bike-price a {
+	padding: 20px 25px;
+	background-color: #323235;
+	color: #fafafa;
+	border-radius: 5px;
+}
+
+.content__callback a:hover,
+.content__callback a:active,
+.content__callback a:focus,
+.content__feedback-form > div > a[href="#win2"]:hover,
+.content__feedback-form > div > a[href="#win2"]:active,
+.content__feedback-form > div > a[href="#win2"]:focus,
+.content__bike-price a:hover,
+.content__bike-price a:active,
+.content__bike-price a:focus {
+	background-color: #757575;
+}
+
+.content__galaxy-img img {
+	width: 75%;
+	margin: 0 auto;
+}

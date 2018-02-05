@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ремонт вело и мото техники г. Донецк</title>
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/our-work.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/device.js"></script>
+</head>
+<body>
+	<header class="header">
+		<div class="header__container">
+			<div class="header__title">
+				<a href="index.html"><img src="img/logo.png" alt=""></a>
+			</div>
+			<div class="header__nav">
+				<div class="header__describe"><p>Вело-мото мастерская г. Донецк</p></div>
+				<div class="header__menu">
+					<div id="nav-icon1">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<nav class="header__nav-menu">
+						<a href="our-work.html">Наши работы</a>
+						<a href="feedback.html">Отзывы клиентов</a>
+						<a href="contacts.html">Контакты</a>
+					</nav>
+				</div>
+			</div>
+			<div class="header__phone">
+				<div class="header__phone-number">
+					<p id="phone1"><i class="fa fa-phone" aria-hidden="true"></i> 066 668 61 54</p>
+				</div>
+				<div class="header__call-order">
+					<a href="#win1">Заказать звонок</a>
+				</div>
+				<a href="#x" class="overlay" id="win1"></a>
+				<div class="popup">
+					<form id="form" method="post">
+						<legend>Оставьте ваши контакты и мы перезвоним вам в течении часа</legend>
+						<input type="text" id="username" name="username" placeholder="Ваше имя*" required>
+						<input type="tel" id="phone" name="phone" placeholder="Номер телефона*"  required>
+						<input type="submit" value="Отправить">
+						<input type="hidden" name="formData" value="Заявка с сайта">
+					</form>
+					<a class="close" title="Закрыть" href="#close"></a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="content">
+			<div class="content__title">
+				<h1>Наши работы</h1>
+				<hr noshade size="3">
+			</div>
+			<div class="content__container">
+				<a href="img/01.jpg" class="flipLightBox"><img src="img/01.jpg" alt=""><span>Описание великолепного байка</span></a>
+				<a href="img/02.jpg" class="flipLightBox"><img src="img/02.jpg" alt=""><span></span></a>
+				<a href="img/03.jpg" class="flipLightBox"><img src="img/03.jpg" alt=""><span></span></a>
+			</div>
+			<div class="content__container">
+				<a href="img/04.jpg" class="flipLightBox"><img src="img/04.jpg" alt=""><span></span></a>
+				<a href="img/05.jpg" class="flipLightBox"><img src="img/05.jpg" alt=""><span></span></a>
+				<a href="img/06.jpg" class="flipLightBox"><img src="img/06.jpg" alt=""><span></span></a>
+			</div>
+			<div class="content__container">
+				<a href="img/07.jpg" class="flipLightBox"><img src="img/07.jpg" alt=""><span></span></a>
+				<a href="img/08.jpg" class="flipLightBox"><img src="img/08.jpg" alt=""><span></span></a>
+				<a href="img/09.jpg" class="flipLightBox"><img src="img/09.jpg" alt=""><span></span></a>
+			</div>
+			<div class="content__container">
+				<a href="img/10.jpg" class="flipLightBox"><img src="img/10.jpg" alt=""><span></span></a>
+				<a href="img/11.jpg" class="flipLightBox"><img src="img/11.jpg" alt=""><span></span></a>
+				<a href="img/12.jpg" class="flipLightBox"><img src="img/12.jpg" alt=""><span></span></a>
+			</div>
+			<div class="content__container">
+				<a href="img/13.jpg" class="flipLightBox"><img src="img/13.jpg" alt=""><span></span></a>
+				<a href="img/14.jpg" class="flipLightBox"><img src="img/14.jpg" alt=""><span></span></a>
+				<a href="img/15.jpg" class="flipLightBox"><img src="img/15.jpg" alt=""><span></span></a>
+			</div>
+			<div class="content__container">
+				<a href="img/16.jpg" class="flipLightBox"><img src="img/16.jpg" alt=""><span></span></a>
+				<a href="img/17.jpg" class="flipLightBox"><img src="img/17.jpg" alt=""><span></span></a>
+				<a href="img/18.jpg" class="flipLightBox"><img src="img/18.jpg" alt=""><span></span></a>
+			</div>
+			<div class="content__galaxy">
+				<div class="content__everyone">
+					<h3>Нашим клиентом может стать каждый</h3>
+					<p>Именно мы собирали все велосипеды для торговых центров "Галактика"</p>
+				</div>
+				<div class="content__galaxy-img">
+					<img src="img/galaxy.jpg" alt="ТЦ Галактика">
+					<img src="img/galaxy_bikes.jpg" alt="Велосипеды для ТЦ Галактика">
+				</div>
+			</div>
+			<div class="content__callback">
+				<h3>Вам тоже нужно отремонтировать технику?</h3>
+				<a href="#win1">Оставьте заявку на диагностику</a>
+			</div>
+	</div>
+	<footer class="footer">
+		<div class="footer__social">
+			<a href="https://new.vk.com/bike_dn">
+				<i class="fa fa-vk fa-lg" aria-hidden="true"></i>
+			</a>
+			<a href="https://twitter.com/bikednua">
+				<i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+			</a>
+			<a href="https://www.instagram.com/bikedonetsk/">
+				<i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+			</a>
+		</div>
+		<div class="footer__donetsk">
+			<p>Донецк - 2017</p>
+		</div>
+		<div class="footer__privacy">
+			<a href="privacy.html">Политика конфиденциальности</a>
+		</div>
+	</footer>
+	<script>
+  	$(document).ready(function () {
+ $("form").submit(function () {
+ // Получение ID формы
+ var formID = $(this).attr('id');
+ // Добавление решётки к имени ID
+ var formNm = $('#' + formID);
+ $.ajax({
+ type: "POST",
+ url: 'mail.php',
+ data: formNm.serialize(),
+ success: function (data) {
+ // Вывод текста результата отправки
+ $(formNm).html(data);
+ },
+ error: function (jqXHR, text, error) {
+ // Вывод текста ошибки отправки
+ $(formNm).html(error);
+ }
+ });
+ return false;
+ });
+}); 
+  </script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/fliplightbox.min.js"></script>
+	<script type="text/javascript">$('body').flipLightBox()</script>
+	<script>
+		$(document).ready(function(){
+	$('#nav-icon1').click(function(){
+		$(this).toggleClass('open');
+		$('.header__nav-menu').toggleClass('expand');
+	});
+}); //меню на телефонах
+		$('#phone').mask("+38 (999) 999-99-99"); //ввод телефона в форме записи
+	</script>
+	<script>
+	if (device.mobile()) {
+		document.getElementById('phone1').innerHTML = '<a href="tel:066 668 61 54">066 668 61 54</a>'; //кликабельный номер телефона на мобильных
+	}
+
+	</script>
+</body>
+</html>

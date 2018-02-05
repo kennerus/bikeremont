@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic,cyrillic-ext');
+
+table.simple-little-table {
+	width: 960px;
+	margin: 30px auto;
+	border-collapse: collapse;
+}
+
+table.simple-little-table strong {
+	font-weight: 600;
+}
+
+.price { 
+	margin-bottom: 2rem;
+	font-size: 2rem;
+	text-align: center;
+}
+
+strong {
+	font-size: 1.2rem;
+	color: #b71c1c;
+}
+
+td:nth-child(1) {
+	text-align: left;
+}
+
+td:nth-child(2) {
+	max-width: 5rem;
+	text-align: center;
+}
+
+.simple-little-table td,
+.simple-little-table th {
+	padding: 2px 20px;
+	height: 40px;
+	line-height: 1.5;
+	border: 1px solid #616161;
+}
+
+.simple-little-table th {
+	text-align: center;
+}
+
+td.no-borders {
+	border-left: hidden;
+	border-right: hidden;
+}
+
+.simple-little-table tr:hover{
+	background-color: #e0e0e0;
+}
+
+.content__service {
+	display: flex;
+	justify-content: space-around;
+}
+
+/*Таблица ТО велосипедов*/
+
+table.bike-table {
+	position: relative;
+	width: 300px !important;
+}
+
+table.bike-table th {
+	height: 70px;
+}
+
+table.bike-table .content__service-include {
+	height: 390px;
+	text-align: left;
+}
+
+table.bike-table .content__service-price {
+	height: 50px;
+	text-align: center;
+}
+
+.bike-table caption img {
+	position: absolute;
+	right: 0;
+	top: -65px;
+	left: 80%;
+}
+
+.bike-table caption img:hover {
+	opacity: 1;
+}
+
+@media (max-width: 1280px) {
+	table.simple-little-table {
+		width: 95%;
+	}
+}
