@@ -4,7 +4,7 @@
 
 .content a img {
 	display: block;
-	width: 97%;
+	width: 95%;
 	margin: 5px;
 }
 
@@ -23,6 +23,12 @@
 	font-size: 1.2rem;
 }
 
+@media (max-width: 576px) {
+	.content p {
+		font-size: 14px;
+	}
+}
+
 .content__callback {
 	padding-bottom: 55px;
 }
@@ -33,6 +39,16 @@
 	background-color: #323235;
 	color: #fafafa;
 	border-radius: 5px;
+}
+
+@media (max-width: 576px) {
+	.content__callback a,
+	.content__bike-price a {
+		display: block;
+		width: 300px;
+		margin: 0 auto;
+		padding: 20px 0;
+	}
 }
 
 .content__callback a:hover,

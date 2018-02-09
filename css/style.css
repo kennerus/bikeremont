@@ -2,22 +2,16 @@
 	font-family: 'PT Sans';
 	font-style: normal;
 	font-weight: normal;
-	src: local('PT Sans'), url('../fonts/PT_Sans-Web-Regular.ttf') format('ttf');
+	src: local('PT Sans'), url('../fonts/PT_Sans-Web-Regular.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: 'PT Sans Bold';
 	font-style: normal;
 	font-weight: bold;
-	src: local('PT Sans'), url('../fonts/PT_Sans-Web-Bold.ttf') format('ttf');
+	src: local('PT Sans'), url('../fonts/PT_Sans-Web-Bold.ttf') format('truetype');
 }
 
-@font-face {
-	font-family: 'PT Sans Bold';
-	font-style: italic;
-	font-weight: normal;
-	src: local('PT Sans'), url('../fonts/PT_Sans-Web-Italic.ttf') format('ttf');
-}
 
 * {
 	box-sizing: border-box;
@@ -27,7 +21,7 @@ body {
 	font-family: 'PT Sans', sans-serif;
 	color: #232323;
 	background-color: #323235;
-	line-height: 1.5;
+	line-height: 1.2;
 }
 
 a {
@@ -46,6 +40,16 @@ a, p, ul, ol {
 
 li {
 	margin-bottom: 5px;
+}
+
+@media (max-width: 576px) {
+	ol {
+		margin: 0;
+	}
+
+	a, p, ul, ol, li {
+		font-size: 1rem;
+	}
 }
 
 h1,
@@ -72,6 +76,22 @@ hr {
 	width: 150px;
 	margin-bottom: 35px;
 	color: #232323;
+}
+
+@media (max-width: 768px) {
+	hr {
+		margin-bottom: 10px;
+	}
+
+	h1, h3 {
+		margin-bottom: 15px;
+		padding-top: 15px;
+		font-size: 2rem;
+	}
+
+	h4 {
+		font-size: 1.3rem;
+	}
 }
 
 .header {
@@ -527,15 +547,41 @@ div.feedback {
 	width: 50%;
 }
 
+.content .content__social {
+	max-width: 100%;
+	padding: 30px 0;
+	background-color: #2C2B2C;
+}
+
+.content__social-list {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-top: 30px;
+}
+
+.content__social-title {
+	margin: 0;
+	font-size: 18px;
+	font-weight: normal;
+	color: white;
+}
+
 .content__social a {
-	color: #232323;
+	display: block;
+	margin-right: 30px;
+	transition: opacity 0.2s;
+}
+
+.content__social a:last-child {
+	margin-right: 0;
 }
 
 .content__social a:hover,
 .content__social a:active,
 .content__social a:focus {
-	color: #757575;
-	text-decoration: underline;
+	opacity: 0.3;
+	transition: opacity 0.2s;
 }
 
 /*политика конфиденциальности*/
@@ -562,6 +608,13 @@ h1.pit-title {
 
 .content__table {
 	padding-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+	.content__table {
+		width: 100vw;
+		overflow-x: auto;
+	}
 }
 
 .content .content__services h3 {
@@ -689,6 +742,10 @@ h1.pit-title {
 
 	.content__info {
 		width: 100%;
+	}
+
+	.content__contacts {
+		padding: 0 10px;
 	}
 }
 
