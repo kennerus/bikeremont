@@ -35,7 +35,7 @@ p {
 }
 
 a, p, ul, ol {
-	font-size: 1.2rem;
+	font-size: 17px;
 }
 
 li {
@@ -68,8 +68,8 @@ h3 {
 h4 {
 	margin-top: 15px;
 	margin-bottom: 10px;
-	font-size: 1.5rem;
-	font-weight: 700;
+	font-size: 1.2rem;
+	font-weight: normal;
 }
 
 hr {
@@ -494,10 +494,10 @@ padding: 10px;
 }
 
 .content__feedback-form > div > a[href="#win2"] {
-	padding: 15px 25px;
+	padding: 10px 20px;
 	border-radius: 5px;
 	color: #fafafa;
-	background-color: #323235;
+	background-color: #323235; 
 }
 
 .content__feedback-form > div:nth-child(2) {
@@ -657,7 +657,7 @@ h1.pit-title {
 	}
 
 	a.content__repair-link {
-		font-size: 2rem;
+		font-size: 1.7rem;
 		font-weight: normal;
 		color: #fafafa;
 	}
