@@ -165,7 +165,7 @@ hr {
 }
 
 .header__call-order a {
-	font-size: 1rem;
+	font-size: 0.9rem;
 }
 
 .header__nav {
@@ -189,7 +189,7 @@ hr {
 #phone2,
 #phone1 a,
 #phone2 a {
-	font-size: 1.5rem;
+	font-size: 1.7rem;
 	font-weight: bold;
 }
 
@@ -210,7 +210,7 @@ hr {
 .content > div {
 	height: 100%;
 	max-width: 1280px;
-	margin: 35px auto 15px;
+	margin: 0 auto 15px;
 	background-color: #fafafa;
 }
 
