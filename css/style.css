@@ -509,26 +509,24 @@ div.feedback {
 	width: 100%;
 }
 
-.content__feedback-container .feedback .block {
+.feedback__block {
 	position: absolute;
 	top: 0;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
 	height: 100%;
 	margin: 0;
 	padding: 30px;
-	opacity: 0;
+	background-color: rgba(255,255,255,0.8);
 }
 
-.block cite {
+.feedback__block cite {
 	align-self: flex-end;
 }
 
-.feedback:hover .block {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	background-color: rgba(255,255,255,0.8);
-	opacity: 1;
-	transition: all 0.5s;
+.feedback__block_active {
+	display: flex !important;
 }
 
 /*страница контактов*/
@@ -833,16 +831,20 @@ h1.pit-title {
 	display: flex !important;
 }
 
-.mob {
-	font-size: 2.5rem;
+.fixed {
+	position: fixed;
+	background-color: #323235;
+	z-index: 5;
 }
 
 @media (max-width: 576px) {
 	.header__nav-menu  {
-		height: calc(100vh - 60px);
+		position: fixed;
+		height: calc(100vh - 59px);
 		align-items: center;
 	}
 	#nav-icon1 {
+		right: -15px;
 		width: 35px;
 		margin: 0 auto;
 	}
@@ -855,6 +857,9 @@ h1.pit-title {
 	}
 	#nav-icon1 span:nth-child(3) {
 		top: 25px;
+	}
+	.header__nav-menu > a {
+		font-size: 24px;
 	}
 	.header__container {
 		flex-wrap: wrap;

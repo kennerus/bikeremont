@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Ремонт вело и мото техники г. Донецк</title>
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<link rel="stylesheet" href="css/normalize.css">
@@ -62,7 +63,7 @@
 				<div class="content__feedback-container">
 					<div class="feedback">
 						<img src="img/dima_d.jpg" alt="">
-						<blockquote class="block">
+						<blockquote class="feedback__block">
 							<p>Неоднократно спицовал колёса, красил обода.
 							Приобрёл много мелочёвых деталей. В общем - добротная мастерская. Обращался не раз и остался доволен, особенно спицовкой колёс. 
 							Также отличный выбор товаров. Цены, конечно, кусаются, но всё же одно из самых дешёвых мест в городе. Ещё не очень нравится местоположение мастерской. Обращайтесь, вы не пожалеете.</p>
@@ -71,21 +72,21 @@
 					</div>
 					<div class="feedback">
 						<img src="img/evgen.jpg" alt="">
-						<blockquote class="block">
+						<blockquote class="feedback__block">
 							<p>Спасибо за качественную рабоу: полное ТО и перекрас. Получилось очень круто! Более чем доволен.</p>
 							<cite>Евгений Волхов, <br> Донецк</cite>
 						</blockquote>
 					</div>
 					<div class="feedback">
 						<img src="img/anna.jpg" alt="">
-						<blockquote class="block">
+						<blockquote class="feedback__block">
 							<p>Хорошая мастерская. Ребята знают своё дело.</p>
 							<cite>Анна Фадеева, <br> Донецк</cite>
 						</blockquote>
 					</div>
 					<div class="feedback">
 						<img src="img/polina.jpg" alt="">
-						<blockquote class="block">
+						<blockquote class="feedback__block">
 							<p>Хорошая веломастерская. Отдавала свой вел на ремонт: сделали полное ТО, поменяли каретку. Теперь как новый!</p>
 							<cite>Полина Юрьева, Донецк</cite>
 						</blockquote>
@@ -111,7 +112,7 @@
 					</div>
 					<div class="feedback">
 						<img src="img/vladimir.jpg" alt="">
-						<blockquote class="block">
+						<blockquote class="feedback__block">
 							<p>В эту мастерскую обращался неоднократно. Вот что моему велу там пришлось пережить:</p>
 							<ol>
 								<li>Замена рамы</li>
@@ -126,7 +127,7 @@
 					</div>
 					<div class="feedback">
 						<img src="img/dima_a.jpg" alt="">
-						<blockquote class="block">
+						<blockquote class="feedback__block">
 							<p>Работает настоящий профессионал, талант! Знаю его много лет. Он может всё. Рекомендую. </p>
 							<cite>Дмитрий Алябьев, <br> Донецк</cite>
 						</blockquote>
@@ -181,14 +182,27 @@
  });
 }); 
   </script>
-	<script>
-		$(document).ready(function(){
-	$('#nav-icon1').click(function(){
-		$(this).toggleClass('open');
-		$('.header__nav-menu').toggleClass('expand');
-	});
+<script>
+$(document).ready(function() {
+  $("#nav-icon1").click(function() {
+    $(this).toggleClass("open");
+    $(".header__nav-menu").toggle();
+    $(".header__nav-menu").toggleClass("expand");
+    $(".header__container").toggleClass("fixed");
+  });
+
+  $(document).on('mouseenter', '.feedback', function() {
+  	$(this).children('.feedback__block').fadeIn(200);
+  	$(this).children('.feedback__block').css('display', 'flex');
+  })
+
+  $(document).on('mouseleave', '.feedback', function() {
+  	$(this).children('.feedback__block').fadeOut(200);
+  	$(this).children('.feedback__block').css('display', 'none');
+  })
+
 }); //меню на телефонах
-		$('#phone').mask("+38 (999) 999-99-99"); //ввод телефона в форме записи
+$("#phone").mask("+38 (999) 999-99-99"); //ввод телефона в форме записи
 	</script>
 	<script>
 	if (device.mobile()) {

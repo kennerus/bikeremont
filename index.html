@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Ремонт вело и мото техники г. Донецк</title>
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<link rel="stylesheet" href="css/normalize.css">
@@ -57,7 +58,7 @@
 			<div class="content__pit-bike">
 				<h3><a class="content__repair-link" href="pit-bike.html">Ремонт пит-байков</a></h3>
 				<a href="pit-bike.html">
-					<img src="img/pit-bike.jpg" alt="Ремонт пит-байков">
+					<img src="img/pit2.jpg" alt="Ремонт пит-байков">
 				</a>
 			</div>
 			<div class="content__bike">
@@ -73,9 +74,9 @@
 				</a>
 			</div>
 			<div class="content__scooter">
-				<h3><a class="content__repair-link" href="scooter.html">Ремонт скутеров</a></h3>
+				<h3><a class="content__repair-link" href="scooter.html">Ремонт скутеров, мопедов, макси-скутеров</a></h3>
 				<a href="scooter.html">
-					<img src="img/scooter.jpg" alt="Ремонт скутером, мопедов">
+					<img src="img/scooter.jpg" alt="Ремонт скутеров, мопедов, макси-скутеров">
 				</a>
 			</div>
 		</div>
@@ -147,13 +148,8 @@
 			$(this).toggleClass('open');
 			$('.header__nav-menu').toggle();
 			$('.header__nav-menu').toggleClass('expand');
+			$('.header__container').toggleClass('fixed');
 		});
-		if (device.mobile()) {
-			$('.header__nav-menu a').addClass('mob');
-			$('#phone1 a').css('font-size', '2rem');
-			$('.header__call-order a').css('font-size', '1.5rem');
-		}
-		
 	});
 
 	  	$('#phone').mask("+38 (999) 999-99-99");

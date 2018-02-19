@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Ремонт вело и мото техники г. Донецк</title>
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<link rel="stylesheet" href="css/normalize.css">
@@ -497,10 +498,12 @@
   </script>
 	<script>
 		$(document).ready(function(){
-	$('#nav-icon1').click(function(){
-		$(this).toggleClass('open');
-		$('.header__nav-menu').toggleClass('expand');
-	});
+	$('#nav-icon1').click(function() {
+			$(this).toggleClass('open');
+			$('.header__nav-menu').toggle();
+			$('.header__nav-menu').toggleClass('expand');
+			$('.header__container').toggleClass('fixed');
+		});
 }); //меню на телефонах
 		$('#phone').mask("+38 (999) 999-99-99"); //ввод телефона в форме записи
 	</script>
