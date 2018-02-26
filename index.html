@@ -7,7 +7,12 @@
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+	<link rel="stylesheet" href="css/slick.css"/>
+	<link rel="stylesheet" href="css/slick-theme.css"/>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+	<script src="js/slick.js"></script>
 	<script src="js/jquery.maskedinput.min.js"></script>
 	<script src="js/device.js"></script>
 </head>
@@ -26,9 +31,10 @@
 						<span></span>
 					</div>
 					<nav class="header__nav-menu">
-						<a href="our-work.html">Наши работы</a>
-						<a href="feedback.html">Отзывы клиентов</a>
-						<a href="contacts.html">Контакты</a>
+						<a href="pit-bike.html">Пит-байки</a>
+						<a href="bike.html">Велосипеды</a>
+						<a href="moto.html">Мотоциклы</a>
+						<a href="scooter.html">Скутеры</a>
 					</nav>
 				</div>
 			</div>
@@ -53,55 +59,191 @@
 			</div>
 		</div>
 	</header>
+	<div class="content__header"></div>
+
 	<div class="content">
-		<div class="content__repair">
-			<div class="content__pit-bike">
-				<h3><a class="content__repair-link" href="pit-bike.html">Ремонт пит-байков</a></h3>
-				<a href="pit-bike.html">
-					<img src="img/pit2.jpg" alt="Ремонт пит-байков">
-				</a>
-			</div>
-			<div class="content__bike">
-				<h3><a class="content__repair-link" href="bike.html">Ремонт велосипеда любой сложности</a></h3>
-				<a href="bike.html">
-					<img src="img/bike.jpg" alt="Ремонт велосипедов">
-				</a>
-			</div>
-			<div class="content__moto">
-				<h3><a class="content__repair-link" href="moto.html">Ремонт мотоциклов и квадрациклов</a></h3>
-				<a href="moto.html">
-					<img src="img/moto.jpg" alt="Ремонт мотоциклов и квадрациклов">
-				</a>
-			</div>
-			<div class="content__scooter">
-				<h3><a class="content__repair-link" href="scooter.html">Ремонт скутеров, мопедов, макси-скутеров</a></h3>
-				<a href="scooter.html">
-					<img src="img/scooter.jpg" alt="Ремонт скутеров, мопедов, макси-скутеров">
-				</a>
-			</div>
-		</div>
-		<div class="content__delivery">
-			<div class="content__table-container">
-				<table class="content__table">
-					<tr class="content__table-row">
-						<td class="content__table-cell content__table-cell_index">
-							<p>Ремонт и обслуживание, покраска пластика, порошковая покраска, запчасти, наклейки</p>
-						</td>
-						<td class="content__table-cell content__table-cell_index">
-							<p>У нас есть возможность доставки вашей техники к нам на ремонт и/или обратно</p>
-							<a href="contacts.html">
-								<img src="img/truck.png" alt="Доставка">
-							</a>
-						</td>
-						<td class="content__table-cell content__table-cell_index">
-							<p>Есть вопросы? Звоните!</p>
-							<p id="phone2"><i class="fa fa-phone" aria-hidden="true"></i> 071 348 02 10</p>
-							<p><a href="#win1">Заказать звонок</a></p>
-						</td>
-					</tr>
-				</table>
+		<div class="content__pros">
+			<h2>Наши плюсы</h2>
+			<div class="pros__blocks">
+				<div class="pros__block">
+					<h3>Наш плюс</h3>
+					<div class="pros__desc">
+						<p>Делаем всё быстро и качествено.</p>
+						<p>И что самое главное - мы не мудаки.</p>
+						<p>Делаем всё быстро и качествено.</p>
+					</div>
+				</div>
+
+				<div class="pros__block">
+					<h3>Наш плюс</h3>
+					<div class="pros__desc">
+						<p>Делаем всё быстро и качествено.</p>
+						<p>И что самое главное - мы не мудаки.</p>
+						<p>Делаем всё быстро и качествено.</p>
+					</div>
+				</div>
+
+				<div class="pros__block">
+					<h3>Наш плюс</h3>
+					<div class="pros__desc">
+						<p>Делаем всё быстро и качествено.</p>
+						<p>И что самое главное - мы не мудаки.</p>
+						<p>Делаем всё быстро и качествено.</p>
+					</div>
+				</div>
+
+				<div class="pros__block">
+					<h3>Наш плюс</h3>
+					<div class="pros__desc">
+						<p>Делаем всё быстро и качествено.</p>
+						<p>И что самое главное - мы не мудаки.</p>
+						<p>Делаем всё быстро и качествено.</p>
+					</div>
+				</div>
 			</div>
 		</div>
+
+		<div class="content__our-works">
+			<h2>Наши работы</h2>
+			<div class="our-works__gallery">
+				<div class="our-works__gallery-img">
+					<a href="img/01.jpg" data-fancybox="gallery"><img src="img/01.jpg" alt=""></a>
+				</div>
+
+				<div class="our-works__gallery-img">
+					<a href="img/02.jpg" data-fancybox="gallery"><img src="img/02.jpg" alt=""></a>
+				</div>
+
+				<div class="our-works__gallery-img">
+					<a href="img/03.jpg" data-fancybox="gallery"><img src="img/03.jpg" alt=""></a>
+				</div>
+
+				<div class="our-works__gallery-img">
+					<a href="img/04.jpg" data-fancybox="gallery"><img src="img/04.jpg" alt=""></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="content__clients">
+			<h2>Наши клиенты</h2>
+			<div class="clients__blocks">
+				<div class="client__block">
+					<img alt="" src="img/anna.jpg">
+					<blockquote class="feedback__block">
+						<p>
+							Хорошая мастерская. Ребята знают своё дело.
+						</p>
+						<cite>Анна Фадеева,<br>
+						Донецк</cite>
+					</blockquote>
+				</div>
+
+				<div class="client__block">
+					<img alt="" src="img/dima_a.jpg">
+					<blockquote class="feedback__block">
+						<p>
+							Работает настоящий профессионал, талант! Знаю его много лет. Он может всё. Рекомендую.
+						</p>
+						<cite>Дмитрий Алябьев,<br>
+						Донецк</cite>
+					</blockquote>
+				</div>
+
+				<div class="client__block">
+					<img alt="" src="img/dima_d.jpg">
+					<blockquote class="feedback__block">
+						<p>
+							Неоднократно спицовал колёса, красил обода. Приобрёл много мелочёвых деталей. В общем - добротная мастерская. Обращался не раз и остался доволен, особенно спицовкой колёс. Также отличный выбор товаров. Цены, конечно, кусаются, но всё же одно из самых дешёвых мест в городе. Ещё не очень нравится местоположение мастерской. Обращайтесь, вы не пожалеете.
+						</p>
+						<cite>Дмитрий Дежин,<br>
+						Донецк</cite>
+					</blockquote>
+				</div>
+
+				<div class="client__block">
+					<img alt="" src="img/evgen.jpg">
+					<blockquote class="feedback__block">
+						<p>
+							Спасибо за качественную рабоу: полное ТО и перекрас. Получилось очень круто! Более чем доволен.
+						</p>
+						<cite>Евгений Волхов,<br>
+						Донецк</cite>
+					</blockquote>
+				</div>
+
+				<div class="client__block">
+					<img alt="" src="img/polina.jpg">
+					<blockquote class="feedback__block">
+						<p>
+							Хорошая веломастерская. Отдавала свой вел на ремонт: сделали полное ТО, поменяли каретку. Теперь как новый!
+						</p>
+						<cite>Полина Юрьева, Донецк</cite>
+					</blockquote>
+				</div>
+
+				<div class="client__block">
+					<img alt="" src="img/vladimir.jpg">
+					<blockquote class="feedback__block">
+						<p>
+							В эту мастерскую обращался неоднократно. Вот что моему велу там пришлось пережить:
+						</p>
+
+						<ol>
+							<li>Замена рамы
+							</li>
+
+							<li>Прокачка тормозов
+							</li>
+
+							<li>Замена масла в вилке
+							</li>
+
+							<li>Накачивание бескамерных покрышек (пневмоудар)
+							</li>
+
+							<li>Установка комплектующих (кассета, система и т.д.
+							</li>
+						</ol>
+
+						<p>
+							Всеми выполненными работами доволен. При появлении последующих неисправностей приеду снова.
+						</p>
+						<cite>Владимир Орлов,<br>
+						Донецк</cite>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+
+		<div class="content__contacts">
+			<h2>Наши контакты</h2>
+			<div class="contacts">
+				<div class="contacts__block">
+					<i class="fa fa-calendar"></i>
+					<p class="contacts__text">Работаем ежедневно с 9:00 до 17:00. Выходной понедельник. </p>
+				</div>
+
+				<div class="contacts__block">
+					<i class="fa fa-map-o"></i>
+					<p class="contacts__text"> г. Донецк, ул. Бессарабская 24, Будённовский район (остановка завод высоковольтных опор) </p>
+				</div>
+
+				<div class="contacts__block">
+					<i class="fa fa-phone"></i>
+					<p class="contacts__text">Звоните нам: +38 (095) 903-45-62 </p>
+				</div>
+
+				<div class="contacts__block">
+					<p>vk wiget</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		
+
+	<div class="map">
+		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4cb104aedf48da19f3a5930485dd3eaebb4d74afa8eaa5352b6fa665308ed067&amp;width=100%25&amp;height=400&amp;lang=ru_UA&amp;scroll=true"></script>
 	</div>
 	<footer class="footer">
 		<div class="footer__social">
@@ -144,12 +286,20 @@
 			});
 			return false;
 		});
+
 		$('#nav-icon1').click(function() {
 			$(this).toggleClass('open');
 			$('.header__nav-menu').toggle();
 			$('.header__nav-menu').toggleClass('expand');
 			$('.header__container').toggleClass('fixed');
 		});
+
+		$('.clients__blocks').slick({
+			infinite: true,
+			slidesToShow: 3,
+			slidesToScroll: 3,
+			dots: true
+		})
 	});
 
 	  	$('#phone').mask("+38 (999) 999-99-99");
