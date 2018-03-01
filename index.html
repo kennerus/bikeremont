@@ -20,10 +20,11 @@
 	<header class="header header-main">
 		<div class="header__container main-page">
 			<div class="header__title">
-				<a href="index.html"><img src="img/logo.png" alt=""></a>
+				<a class="logo-link" href="index.html"><img src="img/logo.png" alt=""></a>
+				<p class="header__title-desc grey-text">Вело-мото мастерская г. Донецк</p>
 			</div>
 			<div class="header__nav">
-				<div class="header__describe"><p>Вело-мото мастерская г. Донецк</p></div>
+				<div class="header__describe"><p class="grey-text">Цены на наши услуги:</p></div>
 				<div class="header__menu">
 					<div id="nav-icon1">
 						<span></span>
@@ -31,19 +32,18 @@
 						<span></span>
 					</div>
 					<nav class="header__nav-menu">
-						<a href="pit-bike.html">Пит-байки</a>
 						<a href="bike.html">Велосипеды</a>
 						<a href="moto.html">Мотоциклы</a>
-						<a href="scooter.html">Скутеры</a>
+						<a href="scooter.html">Скутеры/Мопеды</a>
 					</nav>
 				</div>
 			</div>
 			<div class="header__phone">
 				<div class="header__phone-number">
-					<p id="phone1"><i class="fa fa-phone" aria-hidden="true"></i> 071 348 02 10</p>
+					<p id="phone1"><i class="fa fa-phone" aria-hidden="true"></i> +38 (071) 437 93 15 </p>
 				</div>
 				<div class="header__call-order">
-					<a href="#win1">Заказать звонок</a>
+					<a class="grey-text" href="#win1">Заказать звонок</a>
 				</div>
 				<a href="#x" class="overlay" id="win1"></a>
 				<div class="popup">
@@ -59,14 +59,25 @@
 			</div>
 		</div>
 	</header>
-	<div class="content__header"></div>
+	<div class="top-slider">
+		<div class="top-slider__slide">
+			<img src="img/bike.jpg" alt="">
+
+			<div class="top-slider__content">
+				<h2>Мы прекрасные ребята и у нас скидки к 8 марта!</h2>
+			</div>
+		</div>
+	</div>
 
 	<div class="content">
 		<div class="content__pros">
-			<h2>Наши плюсы</h2>
+			<h2>Что мы предлагаем</h2>
 			<div class="pros__blocks">
 				<div class="pros__block">
-					<h3>Наш плюс</h3>
+					<div class="pros__head">
+						<img src="img/delivery_truck.png" alt="">
+						<h3>Доставка</h3>
+					</div>
 					<div class="pros__desc">
 						<p>Делаем всё быстро и качествено.</p>
 						<p>И что самое главное - мы не мудаки.</p>
@@ -75,7 +86,10 @@
 				</div>
 
 				<div class="pros__block">
-					<h3>Наш плюс</h3>
+					<div class="pros__head">
+						<img src="img/scewdriver.png" alt="">
+						<h3>Все виды ремонта</h3>
+					</div>
 					<div class="pros__desc">
 						<p>Делаем всё быстро и качествено.</p>
 						<p>И что самое главное - мы не мудаки.</p>
@@ -84,7 +98,10 @@
 				</div>
 
 				<div class="pros__block">
-					<h3>Наш плюс</h3>
+					<div class="pros__head">
+						<img src="img/paint.png" alt="">
+						<h3>Покраска</h3>
+					</div>
 					<div class="pros__desc">
 						<p>Делаем всё быстро и качествено.</p>
 						<p>И что самое главное - мы не мудаки.</p>
@@ -93,7 +110,10 @@
 				</div>
 
 				<div class="pros__block">
-					<h3>Наш плюс</h3>
+					<div class="pros__head">
+						<img src="img/settings.png" alt="">
+						<h3>Зап. части в наличии</h3>
+					</div>
 					<div class="pros__desc">
 						<p>Делаем всё быстро и качествено.</p>
 						<p>И что самое главное - мы не мудаки.</p>
@@ -104,7 +124,7 @@
 		</div>
 
 		<div class="content__our-works">
-			<h2>Наши работы</h2>
+			<h2>Мы уже отремонтировали</h2>
 			<div class="our-works__gallery">
 				<div class="our-works__gallery-img">
 					<a href="img/01.jpg" data-fancybox="gallery"><img src="img/01.jpg" alt=""></a>
@@ -120,6 +140,22 @@
 
 				<div class="our-works__gallery-img">
 					<a href="img/04.jpg" data-fancybox="gallery"><img src="img/04.jpg" alt=""></a>
+				</div>
+
+				<div class="our-works__gallery-img">
+					<a href="img/05.jpg" data-fancybox="gallery"><img src="img/05.jpg" alt=""></a>
+				</div>
+
+				<div class="our-works__gallery-img">
+					<a href="img/06.jpg" data-fancybox="gallery"><img src="img/06.jpg" alt=""></a>
+				</div>
+
+				<div class="our-works__gallery-img">
+					<a href="img/07.jpg" data-fancybox="gallery"><img src="img/07.jpg" alt=""></a>
+				</div>
+
+				<div class="our-works__gallery-img">
+					<a href="img/08.jpg" data-fancybox="gallery"><img src="img/08.jpg" alt=""></a>
 				</div>
 			</div>
 		</div>
@@ -177,7 +213,8 @@
 						<p>
 							Хорошая веломастерская. Отдавала свой вел на ремонт: сделали полное ТО, поменяли каретку. Теперь как новый!
 						</p>
-						<cite>Полина Юрьева, Донецк</cite>
+						<cite>Полина Юрьева, <br>
+						Донецк</cite>
 					</blockquote>
 				</div>
 
@@ -213,6 +250,7 @@
 					</blockquote>
 				</div>
 			</div>
+			<a href="#win2">Оставить отзыв</a>
 		</div>
 
 		<div class="content__contacts">
@@ -230,7 +268,7 @@
 
 				<div class="contacts__block">
 					<i class="fa fa-phone"></i>
-					<p class="contacts__text">Звоните нам: +38 (095) 903-45-62 </p>
+					<p class="contacts__text">Звоните нам:  +38 (071) 437-93-15 </p>
 				</div>
 
 				<div class="contacts__block">
@@ -246,17 +284,7 @@
 		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4cb104aedf48da19f3a5930485dd3eaebb4d74afa8eaa5352b6fa665308ed067&amp;width=100%25&amp;height=400&amp;lang=ru_UA&amp;scroll=true"></script>
 	</div>
 	<footer class="footer">
-		<div class="footer__social">
-			<a href="https://new.vk.com/bike_dn">
-				<i class="fa fa-vk fa-lg" aria-hidden="true"></i>
-			</a>
-			<a href="https://twitter.com/bikednua">
-				<i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
-			</a>
-			<a href="https://www.instagram.com/bikedonetsk/">
-				<i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
-			</a>
-		</div>
+
 		<div class="footer__donetsk">
 			<p>Донецк - 2017</p>
 		</div>
@@ -298,16 +326,43 @@
 			infinite: true,
 			slidesToShow: 3,
 			slidesToScroll: 3,
-			dots: true
+			autoplay: true,
+			arrows: false,
+			responsive: [
+				{
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				},
+				{
+					breakpoint: 576,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			]
 		})
+
+		$(document).on('mouseenter', '.client__block', function() {
+		  	$(this).children('.feedback__block').fadeIn(200);
+		  	$(this).children('.feedback__block').css('display', 'flex');
+		  })
+
+		  $(document).on('mouseleave', '.client__block', function() {
+		  	$(this).children('.feedback__block').fadeOut(200);
+		  	$(this).children('.feedback__block').css('display', 'none');
+		  })
 	});
 
 	  	$('#phone').mask("+38 (999) 999-99-99");
 	</script>
 	<script>
 		if (device.mobile()) {
-			document.getElementById('phone1').innerHTML = '<a href="tel:+38(066)668-61-54">071 348 02 10</a>';
-			document.getElementById('phone2').innerHTML = '<a href="tel:+38(066)668-61-54">071 348 02 10</a>';
+			document.getElementById('phone1').innerHTML = '<a href="tel:+380714379315">+38 (071) 437 93 15 </a>'; //кликабельный номер телефона на мобильных
+			document.getElementById('phone2').innerHTML = '<a href="tel:+380714379315">+38 (071) 437 93 15 </a>';
 		}
 	</script>
 		

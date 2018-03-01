@@ -19,7 +19,7 @@
 				<a href="index.html"><img src="img/logo.png" alt=""></a>
 			</div>
 			<div class="header__nav">
-				<div class="header__describe"><p>Вело-мото мастерская г. Донецк</p></div>
+				<div class="header__describe"><p>Цены на ремонт:</p></div>
 				<div class="header__menu">
 					<div id="nav-icon1">
 						<span></span>
@@ -27,16 +27,15 @@
 						<span></span>
 					</div>
 					<nav class="header__nav-menu">
-						<a href="pit-bike.html">Пит-байки</a>
 						<a href="bike.html">Велосипеды</a>
 						<a href="moto.html">Мотоциклы</a>
-						<a href="scooter.html">Скутеры</a>
+						<a href="scooter.html">Скутеры/Мопеды</a>
 					</nav>
 				</div>
 			</div>
 			<div class="header__phone">
 				<div class="header__phone-number">
-					<p id="phone1"><i class="fa fa-phone" aria-hidden="true"></i> 071 348 02 10</p>
+					<p id="phone1"><i class="fa fa-phone" aria-hidden="true"></i> +38(071) 437 93 15 </p>
 				</div>
 				<div class="header__call-order">
 					<a href="#win1">Заказать звонок</a>
@@ -141,17 +140,6 @@
 			</div>
 	</div>
 	<footer class="footer">
-		<div class="footer__social">
-			<a href="https://new.vk.com/bike_dn">
-				<i class="fa fa-vk fa-lg" aria-hidden="true"></i>
-			</a>
-			<a href="https://twitter.com/bikednua">
-				<i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
-			</a>
-			<a href="https://www.instagram.com/bikedonetsk/">
-				<i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
-			</a>
-		</div>
 		<div class="footer__donetsk">
 			<p>Донецк - 2017</p>
 		</div>
@@ -161,27 +149,27 @@
 	</footer>
 	<script>
   	$(document).ready(function () {
- $("form").submit(function () {
- // Получение ID формы
- var formID = $(this).attr('id');
- // Добавление решётки к имени ID
- var formNm = $('#' + formID);
- $.ajax({
- type: "POST",
- url: 'mail.php',
- data: formNm.serialize(),
- success: function (data) {
- // Вывод текста результата отправки
- $(formNm).html(data);
- },
- error: function (jqXHR, text, error) {
- // Вывод текста ошибки отправки
- $(formNm).html(error);
- }
- });
- return false;
- });
-}); 
+	 $("form").submit(function () {
+	 // Получение ID формы
+	 var formID = $(this).attr('id');
+	 // Добавление решётки к имени ID
+	 var formNm = $('#' + formID);
+	 $.ajax({
+	 type: "POST",
+	 url: 'mail.php',
+	 data: formNm.serialize(),
+	 success: function (data) {
+	 // Вывод текста результата отправки
+	 $(formNm).html(data);
+	 },
+	 error: function (jqXHR, text, error) {
+	 // Вывод текста ошибки отправки
+	 $(formNm).html(error);
+	 }
+	 });
+	 return false;
+	 });
+	}); 
   </script>
 <script>
 $(document).ready(function() {
@@ -207,7 +195,7 @@ $("#phone").mask("+38 (999) 999-99-99"); //ввод телефона в форм
 	</script>
 	<script>
 	if (device.mobile()) {
-		document.getElementById('phone1').innerHTML = '<a href="tel:071 348 02 10">071 348 02 10</a>'; //кликабельный номер телефона на мобильных
+		document.getElementById('phone1').innerHTML = '<a href="tel:+380714379315">+38 (071) 437 93 15 </a>'; //кликабельный номер телефона на мобильных
 	}
 
 	</script>
