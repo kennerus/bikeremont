@@ -152,8 +152,8 @@
 					<a href="img/07.jpg" data-fancybox="gallery"><img src="img/07.jpg" alt=""></a>
 				</div>
 
-				<div class="our-works__gallery-img">
-					<a href="img/08.jpg" data-fancybox="gallery"><img src="img/08.jpg" alt=""></a>
+				<div class="our-works__gallery-img our-works__gallery-img_album">
+					<a class="our-works__gallery-link" href="https://vk.com/album-33973321_244270884">Смотреть все работы VK</a>
 				</div>
 			</div>
 		</div>
@@ -248,7 +248,21 @@
 					</blockquote>
 				</div>
 			</div>
-			<a href="#win2">Оставить отзыв</a>
+			<div class="make-feedback">
+				<a href="#win2">Оставить отзыв</a>
+			</div>
+
+			<a href="#x" class="overlay" id="win2"></a>
+			<div class="popup">
+				<form id="form1" method="post">
+					<input type="text" id="user-feedback" name="user-feedback" placeholder="Ваше имя*" required>
+					<input type="email" id="email" name="email" placeholder="Ваш email*"  required>
+					<textarea name="textarea" id="feedback" placeholder="Напишите свой отзыв в этом поле...*" required></textarea>
+					<input type="hidden" name="formData" value="Заявка с сайта">
+					<input type="submit" value="Отправить">
+				</form>
+				<a class="close" title="Закрыть" href="#close"></a>
+			</div>
 		</div>
 
 		<div class="content__contacts">
@@ -270,7 +284,13 @@
 				</div>
 
 				<div class="contacts__block">
-					<p>vk wiget</p>
+					<script type="text/javascript" src="//vk.com/js/api/openapi.js?152"></script>
+
+					<!-- VK Widget -->
+					<div id="vk_groups"></div>
+					<script type="text/javascript">
+					VK.Widgets.Group("vk_groups", {mode: 3, no_cover: 1, width: "300"}, 33973321);
+					</script>
 				</div>
 			</div>
 		</div>
@@ -290,6 +310,13 @@
 			<a href="privacy.html">Политика конфиденциальности</a>
 		</div>
 	</footer>
+	<script data-skip-moving="true">
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=1;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn.bitrix24.ru/b3913853/crm/site_button/loader_4_b1igix.js');
+	</script>
+	
 	<script>
 	$(document).ready(function() {
 		$("form").submit(function() {
@@ -352,7 +379,6 @@
 
 		  $(document).on('mouseleave', '.client__block', function() {
 		  	$(this).children('.feedback__block').fadeOut(200);
-		  	$(this).children('.feedback__block').css('display', 'none');
 		  })
 	});
 
@@ -363,6 +389,12 @@
 			document.getElementById('phone1').innerHTML = '<a href="tel:+380714379315">+38 (071) 437 93 15 </a>'; //кликабельный номер телефона на мобильных
 			document.getElementById('phone2').innerHTML = '<a href="tel:+380714379315">+38 (071) 437 93 15 </a>';
 		}
+	</script>
+	<script data-skip-moving="true">
+	(function(w,d,u){
+	var s=d.createElement('script');s.async=1;s.src=u+'?'+(Date.now()/60000|0);
+	var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+	})(window,document,'https://cdn.bitrix24.ru/b3913853/crm/site_button/load..);
 	</script>
 		
 </body>
